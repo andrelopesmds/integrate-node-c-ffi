@@ -1,6 +1,6 @@
 'use strict';
 
-const cInterface = require('./openssl-interface.js');
+const cInterface = require('./libcrypto-interface.js');
 const jsInterface = require('./crypto-js-interface.js');
 
 const express = require('express');
