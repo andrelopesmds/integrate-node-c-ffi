@@ -1,13 +1,21 @@
-# Production
+# Build and run
 
-## Install
+```
+- cleanZombieContainersRebuildAndRun.sh
+```
 
-docker build -t integrate-node-c-ffi .
+If the container is already running, it will stop, clean up, build and spin up the container again.
 
-## Run
+# End to end test
 
-docker run --name integrate-node-c-ffi -p 8080:8080 -d integrate-node-c-ffi
+```
+- npm install
+- npm test
+```
 
-# Development
+# Performance test
 
-Simply use the script "cleanZombieContainersRebuildAndRun.sh", it will clean up everything and spin up the container again.
+```
+- runK6.sh (js|c)
+```
+
