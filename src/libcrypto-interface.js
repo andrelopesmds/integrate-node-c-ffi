@@ -5,8 +5,9 @@ let libcrypto = ffi.Library('libcrypto', {
 });
 
 
+let buffer = new Buffer.alloc(16);
+
 const getMD5 = (string) => {
-    let buffer = new Buffer(16);
     libcrypto.MD5(string, string.length, buffer);
 
     let hash = "";
