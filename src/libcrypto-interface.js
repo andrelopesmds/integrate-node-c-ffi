@@ -6,11 +6,14 @@ let libcrypto = ffi.Library('libcrypto', {
 
 
 const getMD5 = (string) => {
-    let buffer = new Buffer(16);
-    libcrypto.MD5(string, string.length, buffer);
+    if (typeof getMD5.buffer === 'undefined') {
+        getMD5.buffer = new Buffer.alloc(16);
+    }
+
+    libcrypto.MD5(string, string.length, getMD5.buffer);
 
     let hash = "";
-    for (let i of buffer) {
+    for (let i of getMD5.buffer) {
         hash += i.toString(16);
     }
 
