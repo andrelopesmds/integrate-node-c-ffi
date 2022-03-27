@@ -4,6 +4,7 @@
   "description": "Integrate Node.js and C using ffi",
   "main": "index.js",
   "scripts": {
+    "build": "npm install --only=production",
     "test": "jest"
   },
   "author": "",
