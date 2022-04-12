@@ -1,9 +1,10 @@
 {
   "name": "integrate-node-c-ffi",
   "version": "1.0.0",
-  "description": "Integrate Node.js and C using ffi",
+  "description": "Integrate Node.js with C and Rust using ffi",
   "main": "index.js",
   "scripts": {
+    "build": "npm install --only=production",
     "test": "jest"
   },
   "author": "",
